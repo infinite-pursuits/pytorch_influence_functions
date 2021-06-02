@@ -456,6 +456,7 @@ def calc_img_wise(config, model, train_loader, test_loader):
     for j in range(test_dataset_iter_len):
         # If we calculate evenly per class, choose the test img indicies
         # from the sample_list instead
+        print('j is ',j)
         if test_sample_num and test_start_index:
             if j >= len(sample_list):
                 logging.warn("ERROR: the test sample id is out of index of the"
