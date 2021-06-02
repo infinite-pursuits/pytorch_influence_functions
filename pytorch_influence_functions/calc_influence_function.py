@@ -476,7 +476,7 @@ def calc_img_wise(config, model, train_loader, test_loader):
         ###########
         influences[str(i)] = {}
         _, label = test_loader.dataset[i]
-        influences[str(i)]['label'] = label
+        influences[str(i)]['label'] = label.item()
         influences[str(i)]['num_in_dataset'] = j
         influences[str(i)]['time_calc_influence_s'] = end_time - start_time
         infl = [x.cpu().numpy().tolist() for x in influence]
