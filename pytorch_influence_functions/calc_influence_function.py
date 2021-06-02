@@ -453,6 +453,7 @@ def calc_img_wise(config, model, train_loader, test_loader):
     influences = {}
     # Main loop for calculating the influence function one test sample per
     # iteration.
+    print('test_dataset_iter_len: ',test_dataset_iter_len)
     for j in range(test_dataset_iter_len):
         # If we calculate evenly per class, choose the test img indicies
         # from the sample_list instead
