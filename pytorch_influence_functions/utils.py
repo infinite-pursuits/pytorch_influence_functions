@@ -51,6 +51,7 @@ def save_json(json_obj, json_path, append_if_exists=False,
             return
 
     with open(json_path, 'w+') as fout:
+        print(json_obj, type(json_obj))
         json.dump(json_obj, fout, indent=2)
 
 
